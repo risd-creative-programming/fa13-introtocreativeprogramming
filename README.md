@@ -3,13 +3,14 @@ fa13-introtocreativeprogramming
 
 RISD DM Fall 2013 Intro to Creative Programming - Lauren M. and Evelyn E.
 
-Teaching them how to learn to code
-This is how you find out things about how to make things on the web
-Work through ideas
+## Goals
+- Teaching them how to learn to code
+- "This is how you find out things about how to make things on the web"
+- Work through their own design/art ideas
 
 ## Tasks
 ### July 3, 2013
-- make github
+- ~~make github~~
 - look up free repos
 - assignments
 - production environment / documentation / ftp
