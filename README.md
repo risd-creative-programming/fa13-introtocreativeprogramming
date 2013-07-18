@@ -12,8 +12,9 @@ RISD DM Fall 2013 Intro to Creative Programming - Lauren M. and Evelyn E.
 ### July 3, 2013
 - ~~make github~~
 - look up free repos
-- assignments
-- production environment / documentation / ftp
+- think about first few weekly assignments
+- think about production environment / ftp / sample html
+- this about documentation
 
 ## Course Description
 JS all the way!!!!
