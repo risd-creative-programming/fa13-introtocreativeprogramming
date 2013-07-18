@@ -73,7 +73,7 @@ JS all the way!!!!
 - console window/debugging?
 - View Source!!
 - Use different browsers
-- <DOM>
+- Go over Document Object Model < DOM >
 - threejs
 
 ## Tools / IDE
