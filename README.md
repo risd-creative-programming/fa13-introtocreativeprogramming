@@ -7,51 +7,50 @@ Teaching them how to learn to code
 This is how you find out things about how to make things on the web
 Work through ideas
 
-# Tasks
-## July 3, 2013
+## Tasks
+### July 3, 2013
 - make github
 - look up free repos
 - assignments
 - production environment / documentation / ftp
 
-# Course Description
+## Course Description
 JS all the way!!!!
 
-# Approaches
+## Approaches
 assignments
 3 or 4 projects over course
 no weekly assignments
 if we do projects, suggest things
 break the big idea down
 
-# First Six Weeks
+## First Six Weeks
  Weekly assignments
  with conceptual challenges
 
-# Week 1
+## Week 1
 30 minutes of crazy stuff
 getting started, FTP
 code as instructions, drawing
 input & response -- mouse position, click, keyboard, map
 
-# Week 2
+## Week 2
 HTML/DOM
 variables, operators, control logic (if, for)
 
-# Week 3
+## Week 3
 motion -- animation, tween, timers, math (sin, random, noise), transforms
 media -- images, text, svgs
 
-# Week 4
+## Week 4
 JSON
 arrays / dictionaries
 functions
 
-# Week 5
+## Week 5
 objects / scope
 
-
-# Last Six Weeks
+## Last Six Weeks
 Bigger project
 Few options, open-ended
 Motivating examples
@@ -67,7 +66,7 @@ Libraries
 - Paper.JS
 jQuery
 
-# Frameworks/Agenda
+## Frameworks/Agenda
 PaperJS/canvas/sandbox
 FTP
 template pages to drop their code into
@@ -77,14 +76,14 @@ Use different browsers
 <DOM>
 threejs
 
-# Tools / IDE
+## Tools / IDE
 chrome dev tools tricks - http://www.youtube.com/watch?v=nOEw9iiopwI
 https://github.com/lmccart/js-processing/wiki/IDE-thoughts
 http://sketch.paperjs.org/
 start with no constructed environment, browser is environment!
 then introduce IDEs or other environments as tools
 
-# Structure
+## Structure
 look khan academy structure
 codeacademy?
 or anything else?
@@ -96,11 +95,11 @@ discourse.org?
 https://github.com/edu
 code questions only answered via class mailing list
 
-# Other/similar Classes
+## Other/similar Classes
 PaperJS class at UCLA http://classes.dma.ucla.edu/Fall12/252A
 Who else is doing JS in Graphic Design Department at RISD?
 
-# References / texts
+## References / texts
 http://eloquentjavascript.net/contents.html -- used in UCLA class
 http://ejohn.org/blog/javascript-as-a-first-language/
 http://www.crockford.com/javascript/
