@@ -4,7 +4,7 @@ fa13-introtocreativeprogramming
 RISD DM Fall 2013 Intro to Creative Programming - Lauren M. and Evelyn E.
 
 ## Project page
-## http://risd-creative-programming.github.io/fa13-introtocreativeprogramming
+http://risd-creative-programming.github.io/fa13-introtocreativeprogramming
 
 ## Goals
 - Teaching them how to learn to code
@@ -19,7 +19,7 @@ RISD DM Fall 2013 Intro to Creative Programming - Lauren M. and Evelyn E.
 - ~~write to Sue~~
 - ~~write back to Lauren's email~~
 - check out experimental mode in Processing 2
-- see about making a page in fa2013 github repo for class entry point
+- ~~see about making a page in fa2013 github repo for class entry point~~ -- instructions to update here https://help.github.com/articles/creating-pages-with-the-automatic-generator. basically just fetch origin and checkout gh-pages branch.
 
 ### July 3, 2013
 - ~~make github~~
