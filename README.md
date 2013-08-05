@@ -82,7 +82,7 @@ JS all the way!!!!
 - console window/debugging?
 - View Source!!
 - Use different browsers
-- Go over Document Object Model < DOM >
+- Go over Docum ent Object Model < DOM >
 - threejs
 
 ## Tools / IDE
@@ -107,6 +107,10 @@ JS all the way!!!!
 ## Other/similar Classes
 - PaperJS class at UCLA http://classes.dma.ucla.edu/Fall12/252A
 - Who else is doing JS in Graphic Design Department at RISD?
+- [UCLA DMA Intro programming grad class](http://classes.dma.ucla.edu/Fall10/252A/) -- Casey Reas
+- [UCLA DMA Intro programming undergrad class](http://classes.dma.ucla.edu/Spring11/28/exercises.html) -- Casey Reas
+- [NYU ITP Intro programming grad class](http://itp.nyu.edu/sigs/program/) -- Dan Shiffman
+- [CMU Introduction to the Electronic Media Studio: Computation for the Arts](http://cmuems.com/2012/a/) -- Golan Levin
 
 ## References / texts
 - http://eloquentjavascript.net/contents.html -- used in UCLA class
@@ -116,6 +120,8 @@ JS all the way!!!!
 - http://javascriptissexy.com/how-to-learn-javascript-properly/
 - http://spencertipping.com/js-in-ten-minutes/js-in-ten-minutes.pdf
 
+## Possible other readings
+- Form+Code “What is code?” intro
 
 
 
