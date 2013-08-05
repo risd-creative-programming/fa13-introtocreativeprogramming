@@ -13,8 +13,8 @@ RISD DM Fall 2013 Intro to Creative Programming - Lauren M. and Evelyn E.
 ### July 31, 2013
 - continue the Grunt explorations
 - install LightTable
-- write to Sue
-- write back to Lauren's email
+- ~~write to Sue~~
+- ~~write back to Lauren's email~~
 - check out experimental mode in Processing 2
 - see about making a page in fa2013 github repo for class entry point
 
