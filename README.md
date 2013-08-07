@@ -3,7 +3,7 @@ fa13-introtocreativeprogramming
 
 RISD DM Fall 2013 Intro to Creative Programming - Lauren M. and Evelyn E.
 
-## Project page
+## Course site
 http://risd-creative-programming.github.io/fa13-introtocreativeprogramming
 
 ## Goals
