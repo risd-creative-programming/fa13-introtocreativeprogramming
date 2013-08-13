@@ -19,6 +19,7 @@ http://risd-creative-programming.github.io/fa13-introtocreativeprogramming
 - currently scheduled d+m guests: hito styerl, laurel braitman, tad hirsch (still openings for spring)
 - last week might overlap with final crits, have final proj the second to last week (week 12), be flexible last week (maybe doc due, final one on one meetings, or informal meetings)
 - talk to sue regarding splitting up d+m students across sections
+- first project hosted on github, link students visit, manipulate directly in canvas, then download files and change locally, then put it back on web.
 
 ### July 31, 2013
 - continue the Grunt explorations
