@@ -13,6 +13,13 @@ http://risd-creative-programming.github.io/fa13-introtocreativeprogramming
 
 ## Tasks
 
+### August 14, 2013
+- small budget for guest transportation, but if there are people we want to come, tell kelly, maybe dept can sponsor as d+m wide guest
+- send kelly syllabus for feedback, guest suggestions
+- currently scheduled d+m guests: hito styerl, laurel braitman, tad hirsch (still openings for spring)
+- last week might overlap with final crits, have final proj the second to last week (week 12), be flexible last week (maybe doc due, final one on one meetings, or informal meetings)
+- talk to sue regarding splitting up d+m students across sections
+
 ### July 31, 2013
 - continue the Grunt explorations
 - install LightTable
