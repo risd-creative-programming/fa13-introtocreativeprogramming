@@ -16,6 +16,9 @@ http://risd-creative-programming.github.io/fa13-introtocreativeprogramming
 ### August 19, 2013
 - split out internal meeting notes to google docs
 - talk to sue regarding splitting up d+m students across sections
+- Evelyn: read up history/theory
+- Lauren: think about examples to show
+- Evelyn: look through Learning Processing
 
 ### August 14, 2013
 - small budget for guest transportation, but if there are people we want to come, tell kelly, maybe dept can sponsor as d+m wide guest
