@@ -14,17 +14,16 @@ http://risd-creative-programming.github.io/fa13-introtocreativeprogramming
 ## Tasks
 
 ### August 19, 2013
-- split out internal meeting notes to google docs
-- talk to sue regarding splitting up d+m students across sections
 - Evelyn
   - undefined issues
   - color issue
   - look through Learning Processing
   - read up history/theory
+  - ~~talk to sue regarding splitting up d+m students across sections~~
 - Lauren
   - finish Learning Processing examples / API
   - think about examples to show
-  - reorganize the docs
+  - reorganize/split up the docs
   - get started on API page
 
 ### August 14, 2013
