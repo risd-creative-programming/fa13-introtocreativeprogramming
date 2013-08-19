@@ -13,6 +13,10 @@ http://risd-creative-programming.github.io/fa13-introtocreativeprogramming
 
 ## Tasks
 
+### August 19, 2013
+- split out internal meeting notes to google docs
+- talk to sue regarding splitting up d+m students across sections
+
 ### August 14, 2013
 - small budget for guest transportation, but if there are people we want to come, tell kelly, maybe dept can sponsor as d+m wide guest
 - send kelly syllabus for feedback, guest suggestions
@@ -51,10 +55,45 @@ JS all the way!!!!
 - with conceptual challenges
 
 ## Week 1
-- 30 minutes of crazy stuff
-- getting started, FTP
-- code as instructions, drawing
-- input & response -- mouse position, click, keyboard, map
+(Same Room)
+- 30 minutes
+  - Sorting out enrollment
+  - Go over syllabus
+  - Explain the class
+- 1 hour
+  - http://conditionaldesign.org/
+  - Code as instructions, drawing
+- 15 minutes
+  - Break
+- 1 hour
+  - Theory and history
+    - Form + code book first chapter
+    - New media reader
+    - History of photo and film
+    - Internet articles
+  - Showing example list of videos
+    - Design
+    - Fine arts
+- 15 minutes
+  - Goals of class
+  - Processing vs. processing-js
+  - Bringing in libraries
+- 15 minutes break
+  - Download Google Chrome
+  - Download Sublime
+(Separate Rooms)
+- 45 minutes
+  - Open GitHub page in Chrome
+    - Go straight to sketch.js in console
+    - Demo changing a few commands
+  - Download GitHub page locally to Sublime
+    - Ten sample commands to play with
+    - Input & response -- mouse position, click, keyboard, map
+- 10 minutes
+  - Break
+- 30 minutes
+  - Draw Person's Face!
+  - Save out a screenshot!
 
 ## Week 2
 - HTML/DOM
