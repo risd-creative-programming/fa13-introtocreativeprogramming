@@ -11,43 +11,6 @@ http://risd-creative-programming.github.io/fa13-introtocreativeprogramming
 - "This is how you find out things about how to make things on the web"
 - Work through their own design/art ideas
 
-## Tasks
-
-### August 19, 2013
-- Evelyn
-  - undefined issues
-  - color issue
-  - look through Learning Processing
-  - read up history/theory
-  - ~~talk to sue regarding splitting up d+m students across sections~~
-- Lauren
-  - finish Learning Processing examples / API
-  - think about examples to show
-  - reorganize/split up the docs
-  - get started on API page
-
-### August 14, 2013
-- small budget for guest transportation, but if there are people we want to come, tell kelly, maybe dept can sponsor as d+m wide guest
-- send kelly syllabus for feedback, guest suggestions
-- currently scheduled d+m guests: hito styerl, laurel braitman, tad hirsch (still openings for spring)
-- last week might overlap with final crits, have final proj the second to last week (week 12), be flexible last week (maybe doc due, final one on one meetings, or informal meetings)
-- talk to sue regarding splitting up d+m students across sections
-- first project hosted on github, link students visit, manipulate directly in canvas, then download files and change locally, then put it back on web.
-
-### July 31, 2013
-- continue the Grunt explorations
-- install LightTable
-- ~~write to Sue~~
-- ~~write back to Lauren's email~~
-- check out experimental mode in Processing 2
-- ~~see about making a page in fa2013 github repo for class entry point~~ -- instructions to update here https://help.github.com/articles/creating-pages-with-the-automatic-generator. basically just fetch origin and checkout gh-pages branch.
-
-### July 3, 2013
-- ~~make github~~
-- look up free repos
-- think about first few weekly assignments
-- think about production environment / ftp / sample html
-- this about documentation
 
 ## Course Description
 JS all the way!!!!
@@ -64,45 +27,12 @@ JS all the way!!!!
 - with conceptual challenges
 
 ## Week 1
-(Same Room)
-- 30 minutes
-  - Sorting out enrollment
-  - Go over syllabus
-  - Explain the class
-- 1 hour
-  - http://conditionaldesign.org/
-  - Code as instructions, drawing
-- 15 minutes
-  - Break
-- 1 hour
-  - Theory and history
-    - Form + code book first chapter
-    - New media reader
-    - History of photo and film
-    - Internet articles
-  - Showing example list of videos
-    - Design
-    - Fine arts
-- 15 minutes
-  - Goals of class
-  - Processing vs. processing-js
-  - Bringing in libraries
-- 15 minutes break
-  - Download Google Chrome
-  - Download Sublime
-(Separate Rooms)
-- 45 minutes
-  - Open GitHub page in Chrome
-    - Go straight to sketch.js in console
-    - Demo changing a few commands
-  - Download GitHub page locally to Sublime
-    - Ten sample commands to play with
-    - Input & response -- mouse position, click, keyboard, map
-- 10 minutes
-  - Break
-- 30 minutes
-  - Draw Person's Face!
-  - Save out a screenshot!
+- Intro to creative coding
+- Syllabus overview
+- Drawing with instructions
+- History and theory
+- Examples
+- Getting started
 
 ## Week 2
 - HTML/DOM
