@@ -14,6 +14,7 @@ h1, h2, h3, h4, h5, h6, h1 a {
 
 p, ul, ol, table, pre, dl {
   margin:0 0 20px;
+  font: Arial;
 }
 
 h1, h2, h3 {
