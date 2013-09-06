@@ -1,11 +1,29 @@
+
 var setup = function() {
-  createGraphics(200, 200);
+  createGraphics(600, 400);
 };
 
 var draw = function() {
-  background(250, 250, 50);
-  fill(255, 0, 0);
-  rect(0, 0, 50, 50);
-  fill(0, 255, 0);
-  ellipse(100, 100, 100, 50);
+  background(150, 250, 150);
+
+
+  // Here is a simpler version of a nested for loop. 
+  // Try uncommenting this and commenting out the other one below.
+	// for (var i=200; i<250; i+= 20) {
+	//   for (var j=50; j<100; j+= 20) {
+	//     ellipse(i, j, 10, 10);
+	//   }
+	// }
+
+  // Here we are using two for loops inside each other. I know, what??
+  // The easiest way to understand this is to walk through the code like a computer, try it.
+
+	for (var i=0; i<width; i+= 20) {
+	  for (var j=0; j<height/2; j+= 20) {
+	    ellipse(i, j, 10, 10);
+	  }
+	}
+	
+	// Try changing the < sign to <= sign.
+
 };

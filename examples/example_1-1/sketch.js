@@ -1,7 +1,7 @@
 
 // A for loop has 3 parts. 
 // The init part declares a new value to be used just within the loop, and assigns it a value. i is used a lot, but it can be anything. 
-// The test part evaluates the value of the variable. As long as the value is true, the statements part is evaluated. 
+// The test part evaluates the value of the variable. As long as the value is true, the statements inside the brackets are evaluated. 
 // The update part changes the variable.
 
 // for (init; test; update) {
@@ -28,5 +28,7 @@ var draw = function() {
 	}
 
 	// Try changing 4 to other numbers... 8, 12, 100?!
+	// Try changing 4 to a variable like width.
+	// Try changing the line to an ellipse.
 	
 };
