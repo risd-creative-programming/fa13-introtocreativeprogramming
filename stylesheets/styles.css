@@ -2,9 +2,16 @@
 
 body {
   padding:50px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#444;
   font-weight:300;
+  background: url('../img/reas1.jpg');
+  background-position: -900px 0px;
+  background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6, h1 a {
@@ -48,7 +55,11 @@ a:hover {
 
 .wrapper {
   width:860px;
+  min-height: 1100px;
+  height: 100%;
   margin:0 auto;
+  background: white;
+  padding: 20px;
 }
 
 blockquote {
