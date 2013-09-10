@@ -1,7 +1,7 @@
 var setup = function() {
 
   createGraphics(600, 400);
-  
+
 };
 
 var draw = function() {
@@ -15,6 +15,6 @@ var draw = function() {
 
   //rectangle
   fill(200,200,250);
-  rect(100,400,50,50);
+  rect(400,100,50,50);
 
 };
