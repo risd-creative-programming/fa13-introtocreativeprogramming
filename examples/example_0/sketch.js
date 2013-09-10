@@ -14,7 +14,7 @@ var draw = function() {
   ellipse(100,100,100,100);
 
   //rectangle
-  fill(200,200,250);
+  fill(200,250,200);
   rect(400,100,50,50);
 
 };
