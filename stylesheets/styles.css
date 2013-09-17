@@ -157,3 +157,9 @@ footer {
   position:fixed;
   bottom:50px;
 }
+
+iframe {
+  border:none;
+  width: 100%;
+  height: auto;
+}

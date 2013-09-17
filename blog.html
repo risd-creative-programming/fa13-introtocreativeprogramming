@@ -11,6 +11,24 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+      <!--//
+      function sizeFrame() {
+        var frames = document.getElementsByTagName("iframe");
+        for (var i=0; i<frames.length; i++) {
+          console.log(frames[i]);
+          if (frames[i].contentDocument) {
+            frames[i].height = frames[i].contentDocument.documentElement.scrollHeight+30; //FF 3.0.11, Opera 9.63, and Chrome
+          } else {
+            frames[i].height = frames[i].contentWindow.document.body.scrollHeight+30; //IE6, IE7 and Chrome
+          }
+        }
+      }
+      window.onload=sizeFrame; 
+
+      //-->
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -31,30 +49,43 @@
  
       <section>
         <a href="#assignment2"><p><strong>Class portraits</strong></p></a>        
+        <p><a href="http://students.risd.edu/students/aogasian/index.html">
+          Portrait by Alyson Ogasian<br>
+          <iframe src="http://students.risd.edu/students/aogasian/index.html" scrolling="no" style="height:400px">
+            <img class="blogimg" src="./img/assignment1/aogasian.png" />
+          </iframe>
+        </a></p>
         <p>
-          <a href="http://students.risd.edu/students/aogasian/index.html">Portrait by Alyson Ogasian<br>
-          <img class="blogimg" src="./img/assignment1/aogasian.png" /></a>
-        </p>
-        <p>
-          <a href="http://students.risd.edu/students/schan01/index.html">Portrait by Shutian Chan<br>
-          <img class="blogimg" src="./img/assignment1/schan.png" /></a>
-        </p>
-        <p>
-          <a href="http://students.risd.edu/students/wkong/index.html">Portrait by Weijiang Kong<br>
-          <img class="blogimg" src="./img/assignment1/wkong.png" /></a>
-        </p>
-        <p>
-          <a href="http://students.risd.edu/students/lmartin/L_Martin_portrait/">Portrait of Roommate by Lauren Martin<br>
-          <img class="blogimg" src="./img/assignment1/lmartin.png" /></a>
-        </p>
-        <p>
-          <a href="http://students.risd.edu/students/jlong01/index.html">Portrait of Ye by Jane Long<br>
-          <img class="blogimg" src="./img/assignment1/jlong.png" /></a>
-        </p>
-        <p>
-          <a href="http://students.risd.edu/students/ywang05/index.html">Portrait of Jane by Ye Wang<br>
-          <img class="blogimg" src="./img/assignment1/ywang.png" /></a>
-        </p>
+          <a href="http://students.risd.edu/students/schan01/index.html">
+            Portrait by Shutian Chan<br>
+          <iframe src="http://students.risd.edu/students/schan01/index.html" scrolling="no" style="height:400px">
+            <img class="blogimg" src="./img/assignment1/schan.png" />
+          </iframe>
+        </a></p>
+        <p><a href="http://students.risd.edu/students/wkong/index.html">
+          Portrait by Weijiang Kong<br>
+          <iframe src="http://students.risd.edu/students/wkong/index.html" scrolling="no" style="height:400px">
+            <img class="blogimg" src="./img/assignment1/wkong.png" />
+          </iframe>
+        </a></p>
+        <p><a href="http://students.risd.edu/students/lmartin/L_Martin_portrait/">
+          Portrait of Roommate by Lauren Martin<br>
+          <iframe src="http://students.risd.edu/students/lmartin/L_Martin_portrait/index.html" scrolling="no" style="height:600px">
+            <img class="blogimg" src="./img/assignment1/lmartin.png" />
+          </iframe>
+        </a></p>
+        <p><a href="http://students.risd.edu/students/jlong01/index.html">
+          Portrait of Ye by Jane Long<br>
+          <iframe src="http://students.risd.edu/students/jlong01/index.html" scrolling="no" style="height:720px">
+            <img class="blogimg" src="./img/assignment1/jlong.png" />
+          </iframe>
+        </a></p>
+        <p><a href="http://students.risd.edu/students/ywang05/index.html">
+          Portrait of Jane by Ye Wang<br>
+          <iframe src="http://students.risd.edu/students/ywang05/index.html" scrolling="no" style="height:700px">
+            <img class="blogimg" src="./img/assignment1/ywang.png" />
+          </iframe>
+        </a></p>
       </section>
 
 
