@@ -9,9 +9,19 @@ body {
   font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#444;
   font-weight:300;
-  background: url('../img/reas2.png');
-  background-attachment: fixed;
+  background: 
+  linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0,
+  linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0,
+  linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
+  linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
+  #C1CFD6;
+  background-size: 15px 30px;
+/*  background: url('../img/reas2.png');
+  background-attachment: fixed;*/
 }
+
+
+
 
 h1, h2, h3, h4, h5, h6, h1 a {
   color:#222;
