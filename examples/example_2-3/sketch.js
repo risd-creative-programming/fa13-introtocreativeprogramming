@@ -20,7 +20,7 @@ var draw = function() {
   // var mx = map(mouseX, 0, width, 0, 200);
 
   // Constrain is similar to map, but it just clamps the values on either end, rather than evenly placing.
-  // var mx = constrain(mouseX, 0, width, 0, 200);
+  // var mx = constrain(mouseX, 0, width);
 
   // draw black line
 	stroke(0);  
