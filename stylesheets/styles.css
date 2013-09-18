@@ -9,13 +9,14 @@ body {
   font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#444;
   font-weight:300;
-  background: 
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPklEQVQYV2NkQANGM85sPpdh4osuzogsAFOETTFcIbokOh+sEJd1yOKMuBTBnASTR3EjugeQFROlEKSBaIUAQV4mUlczdJIAAAAASUVORK5CYII=');
+  /*background: 
   linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0,
   linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0,
   linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
   linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
   #C1CFD6;
-  background-size: 15px 30px;
+  background-size: 15px 30px;*/
 /*  background: url('../img/reas2.png');
   background-attachment: fixed;*/
 }
