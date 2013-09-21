@@ -17,10 +17,10 @@ var draw = function() {
   var mx = mouseX/2; 
 
   // If you switch in this line using map, it scales the coordinate with mouseX to a determined range.
-  // var mx = map(mouseX, 0, width, 0, 200);
+  //var mx = map(mouseX, 0, width, 0, 200);
 
   // Constrain is similar to map, but it just clamps the values on either end, rather than evenly placing.
-  // var mx = constrain(mouseX, 0, width);
+  //var mx = constrain(mouseX, 0, width);
 
   // draw black line
 	stroke(0);  
