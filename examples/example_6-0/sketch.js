@@ -1,21 +1,30 @@
 
-// Render text using the text() function
-
 var setup = function() {
 
-  createGraphics(600, 600);
-  fill(255, 0, 0);
-  
+	createGraphics(600, 400);
+	noStroke();
+	background(0, 150, 255);
+	
 };
-
 
 var draw = function() {
 
-	background(250, 250, 200);
-  //textSize(48); // sets the font size
-  //stroke(0); // text renders with stroke, too
-  //textFont('Purisa'); // will automatically work with any font on your local machine
-  //textStyle(BOLD); // takes NORMAL, ITALIC or BOLD
-  text("HELLO WORLD", 100, 200);
+	background(120);
+	fill(255);
+
+	ellipse(width/2, height/2, 200, 200);
+
+	var d = dist(width/2, height/2, mouseX, mouseY);
+
+	// if (d < 125) {
+	// if (d < 75) {
+	if (d < 100) {
+	 fill(0);
+	} else {
+	 fill(200);
+	}
+
+	ellipse(mouseX, mouseY, 50, 50);
 
 };
+

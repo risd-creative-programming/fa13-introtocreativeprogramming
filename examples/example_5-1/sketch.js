@@ -1,24 +1,26 @@
-
-// Render a single image sourced from this folder as the background
-
-var img;
+// Move a line while any key is pressed
+var x = 20;
 
 var setup = function() {
 
-  createGraphics(600, 600);
-  img = loadImage("cat.jpg");
-  
-};
+	createGraphics(600, 600);
+	smooth();
+	strokeWeight(8);
 
+};
 
 var draw = function() {
 
-  // Place image at 0,0 and stretch to width and height
-  // Do this first before any other drawing to make the image the "background"
- 	image(img, 0, 0, width, height);
-
-  // Draw something else
-  fill(255, 0, 0);
-  rect(mouseX, mouseY, 50, 50);
+	background(204);
+	if (isKeyPressed() == true) { // If the key is pressed
+		x++; // add 1 to x
+	}
+	line(x, 120, x-360, 480);
 
 };
+
+// Compare to if you change to keyPressed()??
+
+// var keyPressed = function() {
+// 	x++;
+// };
