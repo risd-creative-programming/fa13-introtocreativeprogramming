@@ -1,26 +1,4 @@
 
-<<<<<<< HEAD
-// Keyboard input
-// Draw a rectangle when any key is pressed
-
-var setup = function() {
-
-	createGraphics(600, 600);
-	smooth();
-	strokeWeight(8);
-
-}
-
-var draw = function() {
-
-	background(204);
-	
-	if (isKeyPressed() == true) { // If the key is pressed,
-		line(120, 120, 480, 480); // draw a line
-	} else { // Otherwise,
-		rect(240, 240, 120, 120); // draw a rectangle
-	}
-=======
 // Render a single image sourced from this folder
 
 var img;
@@ -45,6 +23,5 @@ var draw = function() {
   // Draw the image with the image() command
   // Takes three arguments: the image variable, x position, y position
  	image(img, mouseX, mouseY);
->>>>>>> 14098969900da472774c83cf7cea8aa8156f47b9
-
+ 	
 };
