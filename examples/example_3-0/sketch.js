@@ -16,7 +16,8 @@ var draw = function() {
   if (mouseX < 300) {
     rect(0, 0, 300, 600); // Left
   } else {
+    save();
     rect(300, 0, 300, 600); // Right
   }
-  
+
 };

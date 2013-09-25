@@ -1,5 +1,5 @@
 
-// Check location of 1 rectangular area
+// Check if mouse is pressed
 
 var setup = function() {
 
@@ -14,8 +14,12 @@ var draw = function() {
 
 	background(204);
 
- 	if ((mouseX >= 100) && (mouseX <= 300) && (mouseY >= 200) && (mouseY <= 400)) {
-   	rect(100, 200, 200, 200);
+	if (isMousePressed() == true) {
+		fill(255); // White
+	} else {
+		fill(0); // Black
 	}
+
+	rect(150, 150, 300, 300);
 
 };
