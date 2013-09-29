@@ -1,6 +1,6 @@
-// bouncing color
+// bouncing size
 
-var r = 0;
+var diameter = 0;
 var velocity = 1;
 
 var setup = function() {
@@ -16,21 +16,18 @@ var draw = function() {
 	background(255);
 
 	// Add the current speed to the x location
-  r = r + velocity;
+  diameter = diameter + velocity;
 
   // Remember, || means "or."
-  if ((r > 256) || (r < 0)) {
+  if ((diameter > height/2) || (diameter < 0)) {
     
     // If the object reaches either edge, multiply speed by -1 to turn it around.
     velocity = velocity * -1;
   }
 
-  // Display circle with r value
-  fill(r, 0, 0);
-
-  // Try using r as alpha value
-  fill(255, 0, 0, r);
-  ellipse(width/2,height/2,80,80);
+  // Display circle with diameter
+  fill(255, 0, 0);
+  ellipse(width/2,height/2,diameter, diameter);
 
 };
 

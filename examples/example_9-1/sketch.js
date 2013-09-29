@@ -1,21 +1,35 @@
+// bouncing ball
 
-// Render text using a Google Font: http://www.google.com/fonts
-// There is a <link> tag in the index.html linking to the font resource
+var x = 0;
+var velocity = 1;
 
 var setup = function() {
 
-  createGraphics(600, 600);
-  fill(255, 255, 255);
+  createGraphics(600, 400);
   noStroke();
-  
+
 };
 
 
 var draw = function() {
 
-	background(0);
-  textSize(45);
-  textFont('Clicker Script'); // name of Google Font
-  text("DIFFICULT TO READ", 70, 200);
+	background(200, 0, 80);
+
+	// Add the current speed to the x location
+  x = x + velocity;
+
+  // Remember, || means "or."
+  if ((x > width) || (x < 0)) {
+    
+    // If the object reaches either edge, multiply speed by -1 to turn it around.
+    velocity = velocity * -1;
+  }
+
+  // Display circle at x location
+  fill(175);
+  ellipse(x,100,80,80);
 
 };
+
+
+
