@@ -18,6 +18,8 @@ var draw = function() {
 
 	// Add the current speed to the x location
   diameter = maxDiameter * sin(frameCount);
+
+  // Slow down the bouncing
   //diameter = maxDiameter * sin(frameCount*0.01);
 
   // Display circle with diameter
