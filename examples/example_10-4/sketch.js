@@ -1,35 +1,32 @@
 // Order of operations
 
-
-var x, y;
-
 var setup = function() {
 
   createGraphics(600, 400);
 
-  // Start in the middle of the screen
-  x = width/2;
-  y = height/2;
-
+  noStroke();
   fill(255, 100, 0);
+  rectMode(CENTER);
+
 
 };
 
 
 var draw = function() {
 
-  // Add in background to hide path ellipses
-  // background(100, 0, 255);
+  background(100, 200, 200);
 
-  // Determine the current location
-  // Try changing these values
-  x += random(-2, 2);
-  y += random(-2, 2);
+  // Compare, rotate then translate
+  rotate(frameCount*0.02);
+  translate(width/2, height/2);
 
-  // Display circle at position
-  ellipse(x, y, 50, 50);
+
+  // Versus rotate then translate
+  // translate(width/2, height/2);
+  // rotate(frameCount*0.02);
+
+
+  // Display rectangle
+  rect(0, 0, 100, 100);
 
 };
-
-
-

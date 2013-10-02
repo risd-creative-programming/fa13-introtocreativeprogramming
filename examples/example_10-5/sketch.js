@@ -6,28 +6,28 @@ var x, y;
 var setup = function() {
 
   createGraphics(600, 400);
+  noStroke();
 
-  // Start in the middle of the screen
-  x = width/2;
-  y = height/2;
-
-  fill(255, 100, 0);
 
 };
 
 
 var draw = function() {
 
-  // Add in background to hide path ellipses
-  // background(100, 0, 255);
+  background(100, 200, 200);
 
-  // Determine the current location
-  // Try changing these values
-  x += random(-2, 2);
-  y += random(-2, 2);
+  // Add in push and pop matrix to preserve state of transformation.  
+  //pushMatrix();
 
-  // Display circle at position
-  ellipse(x, y, 50, 50);
+  translate(100, 100);
+  fill(0);
+  ellipse(0, 0, 100, 100);
+
+  //popMatrix();
+
+  translate(100, 100);
+  fill(255);
+  ellipse(0, 0, 50, 50);
 
 };
 
