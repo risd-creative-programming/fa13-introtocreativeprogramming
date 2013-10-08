@@ -1,13 +1,14 @@
 // touch events are very similar to mouse events
 
 var setup = function() {
-  createGraphics(800, 1000); // set to fit a standard-ish smartphone
+  createGraphics(1000, 1600); // set to fit a standard-ish smartphone
   noStroke();
   fill(255, 255, 255);
+  background(200, 190, 190);
 };
 
 var draw = function() {
-  background(200, 190, 190);
+  // keeps program looping even though it is empty
 };
 
 var touchStart = function() {

@@ -3,7 +3,7 @@
 var red = 0;
 
 var setup = function() {
-  createGraphics(900, 1200); // set to fit a standard-ish smartphone
+  createGraphics(1000, 1600); // set to fit a standard-ish smartphone
   noStroke();
   fill(255, 255, 255);
 };
@@ -17,5 +17,5 @@ var draw = function() {
   } else {
     red = 0;
   }
-  
+
 };
