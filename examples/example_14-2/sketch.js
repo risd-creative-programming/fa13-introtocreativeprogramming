@@ -11,21 +11,21 @@ var draw = function() {
   // keeps programming running even if empty
 };
 
-var touchStart = function() {
+var touchStarted = function() {
   fill(0, 255, 0);
   for(var i = 0; i < touches.length; i++) {
     ellipse(touches[i].x, touches[i].y, 80, 80);
   }
 }
 
-var touchMove = function() {
+var touchMoved = function() {
   fill(0, 0, 255);
   for(var i = 0; i < touches.length; i++) {
     ellipse(touches[i].x, touches[i].y, 80, 80);
   }
 }
 
-var touchEnd = function() {
+var touchEnded = function() {
   fill(255, 0, 0);
   for(var i = 0; i < touches.length; i++) {
     ellipse(touches[i].x, touches[i].y, 80, 80);

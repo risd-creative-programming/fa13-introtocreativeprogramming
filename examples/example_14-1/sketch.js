@@ -11,17 +11,17 @@ var draw = function() {
   // keeps program looping even though it is empty
 };
 
-var touchStart = function() {
+var touchStarted = function() {
   fill(0, 255, 0);
   ellipse(touchX, touchY, 80, 80);
 }
 
-var touchMove = function() {
+var touchMoved = function() {
   fill(0, 0, 255);
   ellipse(touchX, touchY, 80, 80);
 }
 
-var touchEnd = function() {
+var touchEnded = function() {
   fill(255, 0, 0);
   ellipse(touchX, touchY, 80, 80);
 }
