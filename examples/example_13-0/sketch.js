@@ -1,63 +1,15 @@
-// createElement(html)
-
 
 var setup = function() {
-  createGraphics(600, 400);
-  background(71);
+  createGraphics(600, 600); // set to fit a standard-ish smartphone
   noStroke();
   noLoop();
-};
+}
 
 var draw = function() {
-
-  var x;
-  var y;
-
-  // You can draw each target individually
-  // But then updating the code (to say, resize the targets) is tedious and
-  // bound to produce errors
-
-  // draw a target
-  x = random(0, width);
-  y = random(0, height);
-  for(var i = 0; i < 10; i++) {
-    fill(i*20, i*20, i*20);
-    ellipse(x, y, 150-(i*20), 150-(i*20));
-  };
-
-  // draw a target
-  x = random(0, width);
-  y = random(0, height);
-  for(var i = 0; i < 10; i++) {
-    fill(i*20, i*20, i*20);
-    ellipse(x, y, 150-(i*20), 150-(i*20));
-  };
-
-  // draw a target
-  x = random(0, width);
-  y = random(0, height);
-  for(var i = 0; i < 10; i++) {
-    fill(i*20, i*20, i*20);
-    ellipse(x, y, 150-(i*20), 150-(i*20));
-  };
-
-  //drawTarget();
-  //drawTarget();
-  //drawTarget();
-
+  var myImage = loadImage("jennifer.png"); // this image came from my Instagram feed :X
+  image(myImage, 0, 0, 600, 600);
+  var c = get(100, 100);
+  print(c);
+  fill(c);
+  rect(100, 100, 300, 300);
 };
-
-// Defining the functionality of target drawing in a 'function' helps you separate out that logic
-// It also helps you with code reusability and modularity
-
-/*var drawTarget = function() {
-  var x;
-  var y;
-
-  x = random(0, width);
-  y = random(0, height);
-  for(var i = 0; i < 10; i++) {
-    fill(i*20, i*20, i*20);
-    ellipse(x, y, 150-(i*20), 150-(i*20));
-  };
-};*/
