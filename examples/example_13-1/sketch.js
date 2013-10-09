@@ -1,62 +1,18 @@
-// Draw three targets, using a function to avoid repeitition and help with modularity
-
 var setup = function() {
-  createGraphics(600, 400);
-  background(71);
-  noStroke();
+  createGraphics(600, 600); 
+  strokeWeight(1);
   noLoop();
-};
+}
 
 var draw = function() {
-
-  var x;
-  var y;
-
-  // You can draw each target individually
-  // But then updating the code (to say, resize the targets) is tedious and
-  // bound to produce errors
-
-  // draw a target
-  x = random(0, width);
-  y = random(0, height);
-  for(var i = 0; i < 10; i++) {
-    fill(i*20, i*20, i*20);
-    ellipse(x, y, 150-(i*20), 150-(i*20));
-  };
-
-  // draw a target
-  x = random(0, width);
-  y = random(0, height);
-  for(var i = 0; i < 10; i++) {
-    fill(i*20, i*20, i*20);
-    ellipse(x, y, 150-(i*20), 150-(i*20));
-  };
-
-  // draw a target
-  x = random(0, width);
-  y = random(0, height);
-  for(var i = 0; i < 10; i++) {
-    fill(i*20, i*20, i*20);
-    ellipse(x, y, 150-(i*20), 150-(i*20));
-  };
-
-  //drawTarget();
-  //drawTarget();
-  //drawTarget();
-
+  var myImage = loadImage("jennifer.png"); // this image came from Evelyn's Instagram feed :X
+  image(myImage, 0, 0, 600, 600);
+  loadPixels(); // this loads the pixels currently on the canvas into the 'pixels' variable
+  for(var i = 0; i < width; i+=30) { // every 20 pixels across
+    for(var j = 0; j < height; j+=30) { // every 20 pixels down
+      var c = pixels[j*width + i]; // calculate where in the pixel array to be, get the value there
+      fill(c);
+      ellipse(i, j, 30, 30); // the location to draw the circle
+    }
+  }
 };
-
-// Defining the functionality of target drawing in a 'function' helps you separate out that logic
-// It also helps you with code reusability and modularity
-
-/*var drawTarget = function() {
-  var x;
-  var y;
-
-  x = random(0, width);
-  y = random(0, height);
-  for(var i = 0; i < 10; i++) {
-    fill(i*20, i*20, i*20);
-    ellipse(x, y, 150-(i*20), 150-(i*20));
-  };
-};*/
