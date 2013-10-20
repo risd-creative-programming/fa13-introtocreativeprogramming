@@ -1,34 +1,50 @@
-// touch events are very similar to mouse events
+
+// declare two graphics canvas variables
+var canvas0;
+var canvas1;
+
 
 var setup = function() {
-  createGraphics(1000, 1600); // set to fit a standard-ish smartphone
-  noStroke();
-  fill(255, 255, 255);
-  background(200, 190, 190);
+  
+  // create first graphics canvas
+  canvas0 = createGraphics(200, 200);
+  // set position for first graphics canvas
+  canvas0.position(0, 0); 
+
+
+  // create second graphics canvas
+  canvas1 = createGraphics(300, 300);
+  // set position for second graphics canvas
+  canvas1.position(500, 0);
+
+
 };
 
 var draw = function() {
-  // keeps programming running even if empty
+
+  // switch to first canvas
+  context( canvas0 );
+
+  // draw everything in first canvas
+  drawStuff(0);
+
+
+
+  // switch to second canvas
+  context( canvas1 );
+
+  // draw everything in second canvas
+  drawStuff(255);
+
 };
 
-var touchStarted = function() {
-  fill(0, 255, 0);
-  for(var i = 0; i < touches.length; i++) {
-    ellipse(touches[i].x, touches[i].y, 80, 80);
-  }
-}
 
-var touchMoved = function() {
-  fill(0, 0, 255);
-  for(var i = 0; i < touches.length; i++) {
-    ellipse(touches[i].x, touches[i].y, 80, 80);
-  }
-}
 
-var touchEnded = function() {
-  fill(255, 0, 0);
-  for(var i = 0; i < touches.length; i++) {
-    ellipse(touches[i].x, touches[i].y, 80, 80);
-  }
-}
+var drawStuff = function(val) {
+
+  background(255, val, 0);
+  rect(100, 100, 40, 40);
+
+};
+
 
