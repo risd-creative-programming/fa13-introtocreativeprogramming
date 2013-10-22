@@ -1,45 +1,42 @@
-// Learning Processing
-// Daniel Shiffman
-// http://www.learningprocessing.com
+// Getting Started with Processing
+// Casey Reas
 
-// Ported by Lauren McCarthy
+// Adapted by Lauren McCarthy
 
-// Example 8-2: Two Car objects
+function JitterBug(tempX, tempY, tempDiameter) {
+  this.x = tempX;
+  this.y = tempY;
+  this.diameter = tempDiamter;
+  this.speed = 0.5;
+}
 
-var myCar0;
-var myCar1; // Two objects!
+JitterBug.prototype.move = function() {
+  x += random(-speed, speed);
+  y += random(-speed, speed);
+};
+
+
+JitterBug.prototype.display = function() {
+  ellipse(x, y, diameter, diameter);
+};
+
+
+
+
+var bug, jit;  // Declare object
 
 var setup = function() {
-  createGraphics(600,400);
-  myCar0 = new Car(50,0,100,2); // Parameters go inside the parentheses when the object is constructed.
-  myCar1 = new Car(200,0,200,1);
+  createGraphics(600, 400);
+  background(50, 89, 100);
+
+  // Create object and pass in parameters
+  bug = new JitterBug(width/2, height/2, 20);
+  jit = new JitterBug(20, 20, 20);
 };
 
 var draw = function() {
-  background(39, 120, 255);
-  myCar0.move();
-  myCar0.display();
-  myCar1.move();
-  myCar1.display();
-};
-
-function Car(tempC, tempXpos, tempYpos, tempXspeed) { // Even though there are multiple objects, we still only need one class. No matter how many cookies we make, only one cookie cutter is needed.Isn’t object-oriented programming swell?
-  this.c = tempC;
-  this.xpos = tempXpos;
-  this.ypos = tempYpos;
-  this.xspeed = tempXspeed;
-}
-
-Car.prototype.display = function() {
-  stroke(0);
-  fill(this.c);
-  rectMode(CENTER);
-  rect(this.xpos,this.ypos,50,20);
-};
-
-Car.prototype.move = function() {
-  this.xpos = this.xpos + this.xspeed;
-  if (this.xpos > width + 25) {
-    this.xpos = -25;
-  }
+  bug.move();
+  bug.display();
+  jit.move();
+  jit.display();
 };
