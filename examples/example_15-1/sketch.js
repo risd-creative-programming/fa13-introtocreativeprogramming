@@ -6,7 +6,7 @@
 function JitterBug(tempX, tempY, tempDiameter) {
   this.x = tempX;
   this.y = tempY;
-  this.diameter = tempDiamter;
+  this.diameter = tempDiameter;
   this.speed = 0.5;
 }
 
