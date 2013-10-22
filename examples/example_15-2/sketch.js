@@ -4,70 +4,42 @@
 
 // Ported by Lauren McCarthy
 
-// Example 8-3
-var zoog0;
-var zoog1;
+// Example 8-1: A Car class and a Car object
+
+var myCar; // Declare car object as a globle variable.
 
 var setup = function() {
   createGraphics(600,400);
-  smooth();
-  zoog0 = new Zoog(100,125,60,60,16);
-  zoog1 = new Zoog(100,125,60,60,16);
+  // Initialize Car object
+  myCar = new Car(); // Initialize car object in setup() by calling constructor.
 };
 
 var draw = function() {
-  background(220, 100, 190);
-  // mouseX position determines speed factor
-  var factor = constrain(mouseX/10,0,5);
-  zoog0.jiggle(factor);
-  zoog0.display();
-  zoog1.jiggle(factor);
-  zoog1.display();
+  background(39, 120, 255);
+  // Operate Car object.
+  myCar.move(); // Operate the car object in draw( ) by calling object methods using the dots syntax.
+  myCar.display();
 };
 
-function Zoog(tempX, tempY, tempW, tempH, tempEyeSize) {
-  // Zoog's variables
-  this.x = tempX;
-  this.y = tempY;
-  this.w = tempW;
-  this.h = tempH;
-  this.eyeSize = tempEyeSize;
+ // Define a class below the rest of the program.
+function Car() {
+  this.c = 175;
+  this.xpos = width/2;
+  this.ypos = height/2;
+  this.xspeed = 1;
 }
 
-// Move Zoog
-Zoog.prototype.jiggle = function(speed) {
-  // Change the location of Zoog randomly
-  this.x = this.x + random(-1,1)*speed;
-  this.y = this.y + random(-1,1)*speed;
-  // Constrain Zoog to window
-  this.x = constrain(this.x,0,width);
-  this.y = constrain(this.y,0,height);
+Car.prototype.display = function() { // Function.
+  // The car is just a square
+  rectMode(CENTER);
+  stroke(0);
+  fill(this.c);
+  rect(this.xpos,this.ypos,50,20);
 };
 
-// Display Zoog
-Zoog.prototype.display = function() {
-  // Set ellipses and rects to CENTER mode
-  ellipseMode(CENTER);
-  rectMode(CENTER);
-  // Draw Zoog's arms with a for loop
-  for (var i = this.y - this.h/3; i < this.y + this.h/2; i += 10) {
-    stroke(0);
-    line(this.x-this.w/4, i, this.x + this.w/4, i);
+Car.prototype.move = function() { // Function.
+  this.xpos = this.xpos + this.xspeed;
+  if (this.xpos > width + 25) {
+    this.xpos = -25;
   }
-  // Draw Zoog's body
-  stroke(0);
-  fill(175);
-  rect(this.x, this.y, this.w/6, this.h);
-  // Draw Zoog's head
-  stroke(0);
-  fill(255);
-  ellipse(this.x, this.y-this.h, this.w, this.h);
-  // Draw Zoog's eyes
-  fill(0);
-  ellipse(this.x-this.w/3, this.y-this.h, this.eyeSize, this.eyeSize*2);
-  ellipse(this.x + this.w/3, this.y - this.h, this.eyeSize, this.eyeSize*2);
-  // Draw Zoog's legs
-  stroke(0);
-  line(this.x - this.w/12, this.y + this.h/2, this.x - this.w/4, this.y + this.h/2 + 10);
-  line(this.x + this.w/12, this.y + this.h/2, this.x + this.w/4, this.y + this.h/2 + 10);
 };

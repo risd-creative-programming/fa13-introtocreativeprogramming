@@ -1,28 +1,29 @@
-// Learning Processing
-// Daniel Shiffman
-// http://www.learningprocessing.com
+// Array of objects
 
 // Ported by Lauren McCarthy
 
-// Example 8-2: Two Car objects
-
-var myCar0;
-var myCar1; // Two objects!
+// Example 8-3
+var cars = [];
 
 var setup = function() {
   createGraphics(600,400);
-  myCar0 = new Car(50,0,100,2); // Parameters go inside the parentheses when the object is constructed.
-  myCar1 = new Car(200,0,200,1);
+
+  for (var i=0; i<10; i++) {
+    cars[i] = new Car(random(255), random(width), random(height), random(10));
+  }
 };
 
 var draw = function() {
-  background(39, 120, 255);
-  myCar0.move();
-  myCar0.display();
-  myCar1.move();
-  myCar1.display();
+  background(220, 100, 190);
+  for (var i=0; i<cars.length; i++) {
+    cars[i].move();
+    cars[i].display();
+  }
 };
 
+
+
+// Car class
 function Car(tempC, tempXpos, tempYpos, tempXspeed) { // Even though there are multiple objects, we still only need one class. No matter how many cookies we make, only one cookie cutter is needed.Isn’t object-oriented programming swell?
   this.c = tempC;
   this.xpos = tempXpos;
