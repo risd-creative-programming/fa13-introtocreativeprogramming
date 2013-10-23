@@ -11,13 +11,13 @@ function JitterBug(tempX, tempY, tempDiameter) {
 }
 
 JitterBug.prototype.move = function() {
-  x += random(-speed, speed);
-  y += random(-speed, speed);
+  this.x += random(-this.speed, this.speed);
+  this.y += random(-this.speed, this.speed);
 };
 
 
 JitterBug.prototype.display = function() {
-  ellipse(x, y, diameter, diameter);
+  ellipse(this.x, this.y, this.diameter, this.diameter);
 };
 
 
