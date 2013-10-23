@@ -7,15 +7,15 @@
  * that define the shape of the curve. 
  */
 
-void setup() {
-  size(640, 360); 
+void setup() {                         // **change** var setup = function() to void setup()
+  size(640, 360);                      // **change** createGraphics() to size()
   stroke(255);
   noFill();
 }
 
-void draw() {
+void draw() {                          // **change** var setup = draw() to void draw()
   background(0);
-  for (int i = 0; i < 200; i += 20) {
+  for (int i = 0; i < 200; i += 20) {  // **change** var i to int i
     bezier(mouseX-(i/2.0), 40+i, 410, 20, 440, 300, 240-(i/16.0), 300+(i/8.0));
   }
 }
