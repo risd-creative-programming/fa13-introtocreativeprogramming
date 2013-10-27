@@ -1,36 +1,36 @@
-// You can load JSON from other files by using loadJSON()
-// The file must end in .json, be properly formatted, and be in the same folder as this sketch.js file
+// Creating other HTML elements.
 
-var people;
 
 var setup = function() {
-  createGraphics(600, 400);
-  people = loadJSON('people.json');
+
+
+  // We are still calling createGraphics like in the past, but now we are storing the result as a variable.
+  // This way we can call methods of the element, to set the position for instance.
+
+  // Try switching the order of these two lines. You notice that it breaks when you put them the other way.
+  // This is because the most the program tries to draw into the most recently created element.
+  // If you create the HTML element second, it doesn't make work to draw background and ellipse into it
+  // because drawing only works with graphics elements.
+
+  // Now let's try putting some more HTML in.
+  var text = createHTML("Here is some text and <a href='http://i.imgur.com/WXaUlrK.gif'>this is an HTML link</a>!");
+  var canvas = createGraphics(600, 400);
+
+  // Here we call methods of each element to set the position and id, try changing these values.
+  // Use the inspector to look at the HTML generated from this code when you load the sketch in your browser.
+  text.position(50, 50);
+  text.id("apple");
+  canvas.position(50, 100);
+  canvas.class("lemon");
+
 };
+
 
 var draw = function() {
 
-	background(120, 180, 200);
-  print(people);
-
-  
+  // These commands are applied to whichever element was most recently created.
+  background(220, 180, 200);
+  ellipse(width/2, height/2, 100, 100);
+  ellipse(width/4, height/2, 50, 50);
 
 };
-
-var drawBubble = function(name, age) {
-  // person 1 bubble
-  fill(155, 30, 180, 180);
-  // you can access values by using a '.' followed by the key
-  ellipse(200, 200, person1.age*5, person1.age*5);  // person1.age = 30
-  fill(255);
-  text(person1.name, 160, 200); // person1.name = Morgan
-
-  // person 2 bubble
-  fill(180, 180, 34, 180);
-  ellipse(300, 200, person2.age*5, person2.age*5);  // person2.age = 32
-  fill(255);
-  text(person2.name, 280, 200); // person2.name = Joss
-}
-
-
-
