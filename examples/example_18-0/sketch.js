@@ -13,7 +13,8 @@ var setup = function() {
   ////////////////
   // Normal sketch
   ////////////////
-  var c = createGraphics(900, 900);
+  var canvas0 = createGraphics(300, 300);
+  canvas0.position(200, 200);
 };
 
 var draw = function() {
