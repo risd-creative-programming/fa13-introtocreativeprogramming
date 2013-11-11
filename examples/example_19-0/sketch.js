@@ -9,7 +9,7 @@ var person1 = {"name": "Morgan", "age": "30", "location": "Boston", "desire": "S
 
 var person2 = {
   "name": "Joss",
-  "age": "32",
+  "age": "42",
   "location": "Boston",
   "desire": "Hiking",
   "fear": "Irrationality"
@@ -28,15 +28,15 @@ var draw = function() {
   // person 1 bubble
   fill(155, 30, 180, 180);
   // you can access values by using a '.' followed by the key
-  ellipse(200, 200, person1.age*5, person1.age*5);  // person1.age = 30
+  ellipse(250, 200, person1.age*5, person1.age*5);  // person1.age = 30
   fill(255);
-  text(person1.name, 160, 200); // person1.name = Morgan
+  text(person1.name, 210, 200); // person1.name = Morgan
 
   // person 2 bubble
   fill(180, 180, 34, 180);
-  ellipse(300, 200, person2.age*5, person2.age*5);  // person2.age = 32
+  ellipse(350, 200, person2.age*5, person2.age*5);  // person2.age = 32
   fill(255);
-  text(person2.name, 280, 200); // person2.name = Joss
+  text(person2.name, 330, 200); // person2.name = Joss
 
 };
 

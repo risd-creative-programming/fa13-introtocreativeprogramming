@@ -3,18 +3,21 @@
 
 var people;
 
+// preload function
+// 
+//
+
+var preload = function() {
+  people = loadJSON('people.json');
+}
+
 var setup = function() {
   createGraphics(600, 400);
-  people = loadJSON('people.json');
 };
 
 var draw = function() {
-
 	background(120, 180, 200);
   print(people);
-
-  
-
 };
 
 var drawBubble = function(name, age) {
