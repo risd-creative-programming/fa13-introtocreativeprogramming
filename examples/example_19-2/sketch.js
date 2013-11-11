@@ -8,7 +8,7 @@ var people;
 //
 
 var preload = function() {
-  people = loadJSON('people.json');
+  people = loadJSON('http://api.openweathermap.org/data/2.5/weather?q=boston');
 }
 
 var setup = function() {
@@ -21,8 +21,9 @@ var draw = function() {
 	background(120, 180, 200);
   // Can access keys
   // you can access values by using a '.' followed by the key
-  drawBubble(people.person1.name, people.person1.age); // accessing the JSON
-  drawBubble(people.person2.name, people.person2.age); // accessing the JSON
+  //drawBubble(people.person1.name, people.person1.age); // accessing the JSON
+  //drawBubble(people.person2.name, people.person2.age); // accessing the JSON
+  print(people);
 };
 
 var drawBubble = function(name, age) {
