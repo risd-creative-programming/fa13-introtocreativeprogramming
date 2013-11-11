@@ -17,7 +17,7 @@ var setup = function() {
 
 var draw = function() {
 	background(120, 180, 200);
-  print(people);
+  print(people.0.name);
 };
 
 var drawBubble = function(name, age) {
