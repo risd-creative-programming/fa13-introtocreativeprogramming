@@ -872,9 +872,13 @@
 
   PHelper.loadJSON = function(path, callback) {
     var self = [];
-    reqwest(path, function (resp) {
-      for (var k in resp) self[k] = resp[k];
-      if (typeof callback !== 'undefined') callback(resp);
+    reqwest({
+      url: path, 
+      type: 'jsonp',
+      success: function (resp) {
+        for (var k in resp) self[k] = resp[k];
+        if (typeof callback !== 'undefined') callback(resp);
+      }
     });
     return self;
   };
