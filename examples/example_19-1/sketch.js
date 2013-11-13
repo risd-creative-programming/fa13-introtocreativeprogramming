@@ -12,12 +12,14 @@ var preload = function() {
 }
 
 var setup = function() {
+  console.log(people);
   createGraphics(600, 400);
   noLoop();
   noStroke();
 };
 
 var draw = function() {
+  console.log(people);
 	background(120, 180, 200);
   // Can access keys
   // you can access values by using a '.' followed by the key

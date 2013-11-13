@@ -1,86 +1,86 @@
 (function(exports) {
 
-	// TRIGONOMETRY
-	exports.HALF_PI = Math.PI*0.5;
-	exports.PI = Math.PI;
-	exports.QUARTER_PI = Math.PI*0.25;
-	exports.TAU = Math.PI*2.0;
-	exports.TWO_PI = Math.PI*2.0;
+  // TRIGONOMETRY
+  exports.HALF_PI = Math.PI*0.5;
+  exports.PI = Math.PI;
+  exports.QUARTER_PI = Math.PI*0.25;
+  exports.TAU = Math.PI*2.0;
+  exports.TWO_PI = Math.PI*2.0;
 
-	// SHAPE
-	exports.CORNER = 'corner'; 
-	exports.CORNERS = 'corners';
-	exports.RADIUS = 'radius';
-	exports.RIGHT = 'right';
-	exports.LEFT = 'left';
-	exports.CENTER = 'center';
-	exports.POINTS = 'points';
-	exports.LINES = 'lines';
-	exports.TRIANGLES = 'triangles';
-	exports.TRIANGLE_FAN = 'triangles_fan';
-	exports.TRIANGLE_STRIP = 'triangles_strip';
-	exports.QUADS = 'quads';
-	exports.QUAD_STRIP = 'quad_strip';
-	exports.CLOSE = 'close';
-	exports.OPEN = 'open';
-	exports.CHORD = 'chord';
-	exports.PIE = 'pie';
-	exports.PROJECT = 'square'; // PEND: careful this is counterintuitive
-	exports.SQUARE = 'butt';
-	exports.ROUND = 'round';
-	exports.BEVEL = 'bevel';
-	exports.MITER = 'miter';
+  // SHAPE
+  exports.CORNER = 'corner'; 
+  exports.CORNERS = 'corners';
+  exports.RADIUS = 'radius';
+  exports.RIGHT = 'right';
+  exports.LEFT = 'left';
+  exports.CENTER = 'center';
+  exports.POINTS = 'points';
+  exports.LINES = 'lines';
+  exports.TRIANGLES = 'triangles';
+  exports.TRIANGLE_FAN = 'triangles_fan';
+  exports.TRIANGLE_STRIP = 'triangles_strip';
+  exports.QUADS = 'quads';
+  exports.QUAD_STRIP = 'quad_strip';
+  exports.CLOSE = 'close';
+  exports.OPEN = 'open';
+  exports.CHORD = 'chord';
+  exports.PIE = 'pie';
+  exports.PROJECT = 'square'; // PEND: careful this is counterintuitive
+  exports.SQUARE = 'butt';
+  exports.ROUND = 'round';
+  exports.BEVEL = 'bevel';
+  exports.MITER = 'miter';
 
-	// COLOR
-	exports.RGB = 'rgb';
-	exports.HSB = 'hsb';
+  // COLOR
+  exports.RGB = 'rgb';
+  exports.HSB = 'hsb';
 
-	// DOM EXTENSION
-	exports.AUTO = 'auto';
+  // DOM EXTENSION
+  exports.AUTO = 'auto';
 
-	// ENVIRONMENT
-	exports.CROSS = 'crosshair';
-	exports.HAND = 'pointer';
-	exports.MOVE = 'move';
-	exports.TEXT = 'text';
-	exports.WAIT = 'wait';
+  // ENVIRONMENT
+  exports.CROSS = 'crosshair';
+  exports.HAND = 'pointer';
+  exports.MOVE = 'move';
+  exports.TEXT = 'text';
+  exports.WAIT = 'wait';
 
-	// TYPOGRAPHY
+  // TYPOGRAPHY
   exports.NORMAL = 'normal';
   exports.ITALIC = 'italic';
   exports.BOLD = 'bold';
 
 }(window));
 ;(function(exports) {
-	PVariables = {
-		loop: true,
-		curElement: null,
-		shapeKind: null,
-		shapeInited: false,
-		fill: false,
-		startTime: 0,
-		updateInterval: 0,
-		rectMode: exports.CORNER,
-		imageMode: exports.CORNER,
-		ellipseMode: exports.CENTER,
-		matrices: [[1,0,0,1,0,0]],
-		textLeading: 15,
-		textFont: 'sans-serif',
-		textSize: 12,
-		textStyle: exports.NORMAL,
-		colorMode: exports.RGB,
-		styles: [],
+  PVariables = {
+    loop: true,
+    curElement: null,
+    shapeKind: null,
+    shapeInited: false,
+    fill: false,
+    startTime: 0,
+    updateInterval: 0,
+    rectMode: exports.CORNER,
+    imageMode: exports.CORNER,
+    ellipseMode: exports.CENTER,
+    matrices: [[1,0,0,1,0,0]],
+    textLeading: 15,
+    textFont: 'sans-serif',
+    textSize: 12,
+    textStyle: exports.NORMAL,
+    colorMode: exports.RGB,
+    styles: [],
 
-		sketches: [],
-		sketchCanvases: [],
-		curSketchIndex: -1,
+    sketches: [],
+    sketchCanvases: [],
+    curSketchIndex: -1,
 
-		mousePressed: false,
+    mousePressed: false,
     preload_count: 0
 
-	};
+  };
 
-	PHelper = {};
+  PHelper = {};
 
   
   // THIS IS THE MAIN FUNCTION, CALLED ON PAGE LOAD
@@ -109,21 +109,20 @@
       exports.loadImage = PHelper.loadImage;
       PHelper.setup();
     }
-
-    PVariables.updateInterval = setInterval(PHelper.update, 1000/frameRate);
-    PHelper.draw();
   };
 
   PHelper.preloadFunc = function(func, path) {
     PVariables.preload_count++;
     return PHelper[func](path, function (resp) {
-      if (--PVariables.preload_count === 0) setup();
+      if (--PVariables.preload_count === 0) PHelper.setup();
     });    
   };
 
   PHelper.setup = function() {
     if (typeof setup === 'function' || PVariables.sketches.length > 0) { // pend whats happening here?
-      if (typeof setup === 'function') setup();
+      if (typeof setup === 'function') setup();    
+      PVariables.updateInterval = setInterval(PHelper.update, 1000/frameRate);
+      PHelper.draw();
     } else console.log("sketch must include a setup function");
   };
 
@@ -872,10 +871,11 @@
 
   PHelper.loadJSON = function(path, callback) {
     var self = [];
-    reqwest(path, function (resp) {
+    var t = path.indexOf('http') == -1 ? 'json' : 'jsonp';
+    reqwest({url: path, type: t, success: function (resp) {
       for (var k in resp) self[k] = resp[k];
       if (typeof callback !== 'undefined') callback(resp);
-    });
+    }});
     return self;
   };
   PHelper.loadStrings = function(path, callback) {
@@ -1169,8 +1169,8 @@
 
 }(window));;(function(exports) {
 
-	exports.touchX = 0;
-	exports.touchY = 0;
+  exports.touchX = 0;
+  exports.touchY = 0;
 
   PHelper.setTouchPoints = function(e) {
     exports.touchX = e.changedTouches[0].pageX;
@@ -1487,7 +1487,7 @@
 }(window));
 
 ;(function(exports) {
-	exports.arc = function() {
+  exports.arc = function() {
     // pend todo
   };
   exports.ellipse = function(a, b, c, d) {
@@ -1564,7 +1564,7 @@
   }; 
 }(window));
 ;(function(exports) {
-	exports.ellipseMode = function(m) {
+  exports.ellipseMode = function(m) {
     if (m == exports.CORNER || m == exports.CORNERS || m == exports.RADIUS || m == exports.CENTER) {
       PVariables.ellipseMode = m;
     }
@@ -1600,7 +1600,7 @@
 
 }(window));
 ;(function(exports) {
-	exports.bezier = function(x1, y1, x2, y2, x3, y3, x4, y4) {
+  exports.bezier = function(x1, y1, x2, y2, x3, y3, x4, y4) {
     PVariables.curElement.context.beginPath();
     PVariables.curElement.context.moveTo(x1, y1);
     PVariables.curElement.context.bezierCurveTo(x2, y2, x3, y3, x4, y4);
@@ -1632,7 +1632,7 @@
   };
 }(window));
 ;(function(exports) {
-	exports.beginContour = function() {
+  exports.beginContour = function() {
     // TODO
   };
   exports.beginShape = function(kind) {
