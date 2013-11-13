@@ -1,40 +1,55 @@
-// You can load JSON from other files by using loadJSON()
-// The file must end in .json, be properly formatted, and be in the same folder as this sketch.js file
-
-var people;
-
-// preload function
-// 
+// JSON stands for JavaScript Object Notation
+// It is a convenient way to make collections of data with key/value pairs.
 //
+// Syntax:
+// { "key" : "value", "key" : "value", ... }
+//
+// person1
+// key = "name"      value = "Morgan"
+// key = "age"       value = "30"
+// key = "location"  value = "Boston"
+// key = "desire"    value = "Singing"
+// key = "fear"      value = "Violence"
 
-var preload = function() {
-  people = loadJSON('people.json');
-}
+var person1 = {"name": "Morgan", "age": "30", "location": "Boston", "desire": "Singing", "fear": "Violence" };
+
+var person2 = {
+  "name": "Joss",
+  "age": "42",
+  "location": "Boston",
+  "desire": "Hiking",
+  "fear": "Irrationality"
+};
 
 var setup = function() {
-  console.log(people);
   createGraphics(600, 400);
-  noLoop();
   noStroke();
+  textSize(20);
 };
 
 var draw = function() {
-  console.log(people);
-	background(120, 180, 200);
-  // Can access keys
-  // you can access values by using a '.' followed by the key
-  drawBubble(people.person1.name, people.person1.age); // accessing the JSON
-  drawBubble(people.person2.name, people.person2.age); // accessing the JSON
-};
 
-var drawBubble = function(name, age) {
-  var posX = random(width);
-  var posY = random(height);
-  fill(random(255), random(255), random(255), 180);
-  ellipse(posX, posY, age*5, age*5)
+	background(120, 180, 200);
+
+  // person 1 bubble
+  fill(155, 30, 180, 180);
+  //
+  // You can access JSON values by using a '.' followed by the key
+  //
+  // person1.name = "Morgan"
+  // person2.name = "Joss"
+  //
+  ellipse(250, 200, person1.age*5, person1.age*5);  // person1.age = 30
   fill(255);
-  text(name, posX - 10, posY);
-}
+  text(person1.name, 210, 200); // person1.name = Morgan
+
+  // person 2 bubble
+  fill(180, 180, 34, 180);
+  ellipse(350, 200, person2.age*5, person2.age*5);  // person2.age = 32
+  fill(255);
+  text(person2.name, 330, 200); // person2.name = Joss
+
+};
 
 
 

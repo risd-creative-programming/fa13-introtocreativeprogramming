@@ -1,17 +1,36 @@
-// You can load JSON from other files by using loadJSON()
-// The file must end in .json, be properly formatted, and be in the same folder as this sketch.js file
+// You can load JSON from other files by using loadJSON().
+// The file must end in .js, be properly formatted, and be in 
+// the same folder as this sketch.js file.
+// JSON can be embedded within itself, so a key's value can itself be a JSON object.
+/* {
+  "person1": { 
+    "name": "Morgan",
+    "age": "30",
+    "location": "Boston",
+    "desire": "Singing",
+    "fear": "Violence"
+  },
+  "person2" : {
+    "name": "Joss",
+    "age": "42",
+    "location": "Boston",
+    "desire": "Hiking",
+    "fear": "Irrationality"
+  }
+} */
+// In the above JSON, person1 is a key, and the right-hand side of the colon is the value, a JSON object.
+// Similarly, person2 is a key, and the right-hand side of the colon is the value, a JSON object.
 
 var people;
 
-// preload function
-// 
-//
-
+// Use loadJSON() in the preload() function to ensure that
+// it will load completely by the time setup() runs.
 var preload = function() {
-  people = loadJSON('http://api.openweathermap.org/data/2.5/weather?q=boston');
+  people = loadJSON('people.js');
 }
 
 var setup = function() {
+  console.log(people); // console log to see the loaded JSON it in the dev tools
   createGraphics(600, 400);
   noLoop();
   noStroke();
@@ -19,11 +38,11 @@ var setup = function() {
 
 var draw = function() {
 	background(120, 180, 200);
-  // Can access keys
-  // you can access values by using a '.' followed by the key
-  //drawBubble(people.person1.name, people.person1.age); // accessing the JSON
-  //drawBubble(people.person2.name, people.person2.age); // accessing the JSON
-  print(people);
+ 
+  // To access loaded JSON, the syntax is:
+  // [variable name].[key].[key]...
+  drawBubble(people.person1.name, people.person1.age); // people is the variable, person1 is a key, name is a key
+  drawBubble(people.person2.name, people.person2.age); // people is the variable, person2 is a key, name is a key
 };
 
 var drawBubble = function(name, age) {

@@ -1,43 +1,28 @@
-// JSON stands for JavaScript Object Notation
-// It is a convenient way to make collections of data with key/value pairs
-// Syntax:
-// { "key" : "value", "key" : "value", ... }
+// In this example, we want to load a *very large* (123MegaPixels)
+// image and display it in setup().
+//
+// Since setup() happens quickly at the beginning, the image doesn't
+// have time to properly load before setup() is done.
+// 
+// We are introducing preload() where you can run load
+// operations that are guaranteed to complete by setup().
+// This is called asynchronous loading, because it happens whenever
+// the computer is done and ready, not necessarily when you call it.
 
-var person1 = {"name": "Morgan", "age": "30", "location": "Boston", "desire": "Singing", "fear": "Violence" };
+var largeImage;
 
-// person1 key = "name", value = "Evelyn"
-
-var person2 = {
-  "name": "Joss",
-  "age": "42",
-  "location": "Boston",
-  "desire": "Hiking",
-  "fear": "Irrationality"
+var preload = function() {
+  //largeImage = loadImage('ripple.jpg'); // preloading the image guarantees it will be ready by setup()
 };
 
 var setup = function() {
-  createGraphics(600, 400);
-  noStroke();
-  textSize(20);
+  createGraphics(1300, 600);
+  largeImage = loadImage('ripple.jpg');   // loading the image here is too slow
+  image(largeImage, 0, 0);
 };
 
 var draw = function() {
-
-	background(120, 180, 200);
-
-  // person 1 bubble
-  fill(155, 30, 180, 180);
-  // you can access values by using a '.' followed by the key
-  ellipse(250, 200, person1.age*5, person1.age*5);  // person1.age = 30
-  fill(255);
-  text(person1.name, 210, 200); // person1.name = Morgan
-
-  // person 2 bubble
-  fill(180, 180, 34, 180);
-  ellipse(350, 200, person2.age*5, person2.age*5);  // person2.age = 32
-  fill(255);
-  text(person2.name, 330, 200); // person2.name = Joss
-
+	// do nothing
 };
 
 
