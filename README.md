@@ -1,4 +1,4 @@
-##Introduction to Creative Programming  
+## Introduction to Creative Programming  
 Digital + Media | RISD | Fall 2013  
 Lauren McCarthy and Evelyn Eastmond  
 
